@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MoviesApp</string>
+    <string name="about">Life just isn\'t fair, is it? Over the years, many classics and hidden gems have been nominated for Oscar awards, only to be snubbed at the end.\n\nWe aim to showcase some of these movies here. In the words of Henry Longfellow, \"The talent of success is nothing more than doing what you can do well and doing well whatever you do without thought of fame.\"</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
