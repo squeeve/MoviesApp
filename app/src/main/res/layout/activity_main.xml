@@ -11,16 +11,25 @@
     android:fitsSystemWindows="true"
     tools:context=".MainActivity">
 
-<!--
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_gravity="center_vertical"
-    android:background="@drawable/lighting"
-    tools:context=".MainActivity"
-    tools:menu="@menu/main_nav_menu">
+    <!--
+     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        tools:menu="@menu/main_nav_menu">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_fragment_container"
+        android:background="@drawable/lighting"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout="@layout/fragment_about" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
     -->
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -43,11 +52,12 @@
         android:name="com.example.moviesapp.About"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/topToolbar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/topToolbar"
         tools:layout="@layout/fragment_about" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.navigation.NavigationView
@@ -58,5 +68,4 @@
         android:fitsSystemWindows="true"
         app:menu="@menu/nav_drawer" />
 
-<!-- </androidx.constraintlayout.widget.ConstraintLayout> -->
 </androidx.drawerlayout.widget.DrawerLayout>
