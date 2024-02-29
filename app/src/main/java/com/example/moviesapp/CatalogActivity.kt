@@ -9,8 +9,8 @@ class CatalogActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_catalog)
 
-        val catalog = CatalogAdapter()
-        val recyclerView: RecyclerView = findViewById(R.id.recycler_view)
-        recyclerView.adapter = catalog
+        val catalog = CatalogAdapter() // Get the adapter that binds data to view
+        val recyclerView: RecyclerView = findViewById(R.id.recycler_view) // get the view, and then
+        recyclerView.adapter = catalog // Set its adapter to that acquired adapter.
     }
 }
