@@ -6,4 +6,6 @@
     <string name="nav_close">Close</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="tablayout_verbiage">scrollable list of movie names</string>
+    <string name="movie_poster">Movie poster</string>
+    <string name="verbiage_movie">Some verbiage about this movie.</string>
 </resources>
