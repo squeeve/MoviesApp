@@ -3,6 +3,7 @@ package com.example.moviesapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -54,10 +55,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 .replace(R.id.fragment_view, Catalog.newInstance())
                 .addToBackStack(null)
                 .commit()
-            R.id.activity3_rand_item -> supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_view, RandMovie.newInstance())
-                .addToBackStack(null)
-                .commit()
+            R.id.activity3_rand_item -> {
+                val randMovie = Intent(this, RandMovieActivity::class.java)
+                val position = (0..<listing.size).random()
+                Log.d("MainActivity" , "position = ${position}")
+                randMovie.putExtra("position", position)
+                startActivity(randMovie)
+            }
         }
         return super.onOptionsItemSelected(item)
     }
@@ -74,10 +78,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 .addToBackStack(null)
                 .commit()
 
-            R.id.nav3_rand_item -> supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_view, RandMovie.newInstance())
-                .addToBackStack(null)
-                .commit()
+            R.id.activity3_rand_item -> {
+                val randMovie = Intent(this, RandMovieActivity::class.java)
+                val position = (0..<listing.size).random()
+                Log.d("MainActivity" , "position = ${position}")
+                randMovie.putExtra("position", position)
+                startActivity(randMovie)
+            }
         }
         return super.onOptionsItemSelected(item)
     }

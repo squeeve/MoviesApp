@@ -33,8 +33,6 @@ class Catalog : Fragment() {
 
     companion object {
         @JvmStatic
-        fun newInstance() =
-            Catalog().apply {
-            }
+        fun newInstance() = Catalog()
     }
 }
